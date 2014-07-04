@@ -63,7 +63,7 @@
       </address>
     </author>
 
-    <date day="22" month="January" year="2014" />
+    <date day="04" month="July" year="2014" />
 
     <area>RAI</area>
 
@@ -634,10 +634,11 @@
             Note that in principle an attacker could exert some control
             over SRTP packets by using a combination of the WebAudio API
             and extremely tight timing control. 
-            The primary risk here seems to be carriage of SRTP over TURN TCP,
-            However, SRTP packets have an extremely characteristic packet
-            format which makes it unlikely that any but the most aggressive
-            intermediaries would be confused.
+            The primary risk here seems to be carriage of SRTP over TURN TCP.
+            However, as SRTP packets have an extremely characteristic packet
+            header it seems unlikely that any but the most aggressive
+            intermediaries would be confused into thinking that another
+            application layer protocol was in use.
           </t>
         </section>
         <section title="Backward Compatibility">
