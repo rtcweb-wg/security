@@ -4,9 +4,9 @@ RTCWEB JSEP Draft Specification
 This is the working area for the [IETF RTCWEB Working
 Group](http://trac.tools.ietf.org/wg/rtcweb/trac/wiki) draft of [WebRTC Security Architecture](http://tools.ietf.org/html/draft-ietf-rtcweb-security-arch)
 
-WebRTC Security Architecture
-* [Editor's copy](http://rtcweb-wg.github.io/security-arch/)
-* [Working Group Draft] (http://tools.ietf.org/html/draft-ietf-rtcweb-security-arch)
+WebRTC Security Analysis
+* [Editor's copy](http://rtcweb-wg.github.io/security/)
+* [Working Group Draft] (http://tools.ietf.org/html/draft-ietf-rtcweb-security)
 
 
 Contributing
