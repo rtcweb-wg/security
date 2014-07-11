@@ -94,7 +94,7 @@
         The Real-Time Communications on the Web (RTCWEB) working group is tasked with
         standardizing protocols for real-time communications between Web browsers, generally
         called "WebRTC" <xref target="I-D.ietf-rtcweb-overview"/>. The
-        major use cases for WebTC technology are real-time audio and/or video calls,
+        major use cases for WebRTC technology are real-time audio and/or video calls,
         Web conferencing, and direct data transfer. Unlike most conventional real-time systems,
         (e.g., SIP-based<xref target="RFC3261"></xref> soft phones) WebRTC communications are directly controlled
         by some Web server. A simple case is shown below.
@@ -232,7 +232,7 @@
           Many other resources are accessible but isolated. For instance,
           while scripts are allowed to make HTTP requests via the XMLHttpRequest() API
           those requests are not allowed to be made to any server, but rather solely
-          to the same ORIGIN from whence the script came xref target="RFC6454"/>
+          to the same ORIGIN from whence the script came <xref target="RFC6454"/>
           (although CORS <xref target="CORS"/> and WebSockets
           <xref target="RFC6455"/> provide a escape hatch from this restriction,
           as described below.)
@@ -307,7 +307,7 @@
           models:
         </t>
         <t>
-          <list>
+          <list style="numbers">
             <t>You are sending your media to entity A because you want to
             talk to Entity A (e.g., your mother).</t>
             <t>Entity A (e.g., a calling service) asks to access the user's devices with the assurance
@@ -719,7 +719,7 @@
             However, because sites can cause the browser to provide
             IP addresses, this provides a mechanism for sites to learn
             about the user's network environment even if the user is behind
-            a VPN that masks their IP address. Implementations wish
+            a VPN that masks their IP address. Implementations may wish
             to provide settings which suppress all non-VPN candidates if
             the user is on certain kinds of VPN, especially privacy-oriented
             systems such as Tor.
