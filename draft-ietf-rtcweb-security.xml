@@ -1094,6 +1094,8 @@
             <organization></organization>
           </author>
 
+          <!-- Date from PDF properties -->
+          <date day="19" month="September" year="2010" />
 
         </front>
         <seriesInfo name="" value="RTC-Web Workshop"/>
@@ -1111,6 +1113,9 @@
           <author initials="J.D." surname="Tygar">
             <organization></organization>
           </author>
+
+          <!-- Date of USENIX Security Symposium -->
+          <date month="August" year="1999" />
         </front>
         <seriesInfo name="" value="Proceedings of the 8th USENIX Security Symposium, 1999"/>
       </reference>
@@ -1136,6 +1141,9 @@
           <author initials="L." surname="cranor">
             <organization></organization>
           </author>
+
+          <!-- Date of USENIX Security Symposium -->
+          <date month="August" year="2009" />
         </front>
 
         <seriesInfo name="" value="Proceedings of the 18th USENIX Security Symposium, 2009"/>
@@ -1155,6 +1163,9 @@
           <author initials="M." surname="Macon">
             <organization></organization>
           </author>
+
+          <!-- Date of ICASSP 2001 -->
+          <date month="May" year="2001" />
         </front>
 
         <seriesInfo name="" value="Proceedings of ICASSP, May 2001"/>
@@ -1174,6 +1185,8 @@
             <organization></organization>
           </author>
 
+          <!-- Date from http://www.researchgate.net/publication/228819912 -->
+          <date month="January" year="2008" />
         </front>
       </reference>
 
@@ -1197,6 +1210,9 @@
           <author initials="C." surname="Jackson">
             <organization></organization>
           </author>
+
+          <!-- Date from PDF properties -->
+          <date month="May" year="2011" />
         </front>
 
         <seriesInfo name="" value="W2SP, 2011"/>
@@ -1215,6 +1231,9 @@
           <author initials="C." surname="Jackson">
             <organization></organization>
           </author>
+
+          <!-- Date from PDF properties -->
+          <date month="July" year="2008" />
         </front>
 
         <seriesInfo name="" value="W2SP, 2008"/>
@@ -1228,6 +1247,9 @@
           <author initials="A." surname="van Kesteren">
             <organization></organization>
           </author>
+
+          <!-- Date from http://www.w3.org/TR/2014/REC-cors-20140116/ -->
+          <date day="16" month="January" year="2014" />
         </front>
         <format target="http://www.w3.org/TR/cors/" type="TXT"/>
       </reference>
@@ -1239,6 +1261,9 @@
           <author surname="Adobe">
           <organization></organization>
           </author>
+
+          <!-- Date from PDF properties -->
+          <date day="23" month="April" year="2013" />
         </front>
         <format target="http://www.adobe.com/content/dam/Adobe/en/devnet/swf/pdf/swf_file_format_spec_v10.pdf" type="PDF"/>
       </reference>
