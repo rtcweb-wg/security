@@ -94,7 +94,7 @@
         The Real-Time Communications on the Web (RTCWEB) working group is tasked with
         standardizing protocols for real-time communications between Web browsers, generally
         called "WebRTC" <xref target="I-D.ietf-rtcweb-overview"/>. The
-        major use cases for WebTC technology are real-time audio and/or video calls,
+        major use cases for WebRTC technology are real-time audio and/or video calls,
         Web conferencing, and direct data transfer. Unlike most conventional real-time systems,
         (e.g., SIP-based<xref target="RFC3261"></xref> soft phones) WebRTC communications are directly controlled
         by some Web server. A simple case is shown below.
@@ -232,7 +232,7 @@
           Many other resources are accessible but isolated. For instance,
           while scripts are allowed to make HTTP requests via the XMLHttpRequest() API
           those requests are not allowed to be made to any server, but rather solely
-          to the same ORIGIN from whence the script came xref target="RFC6454"/>
+          to the same ORIGIN from whence the script came <xref target="RFC6454"/>
           (although CORS <xref target="CORS"/> and WebSockets
           <xref target="RFC6455"/> provide a escape hatch from this restriction,
           as described below.)
@@ -307,7 +307,7 @@
           models:
         </t>
         <t>
-          <list>
+          <list style="numbers">
             <t>You are sending your media to entity A because you want to
             talk to Entity A (e.g., your mother).</t>
             <t>Entity A (e.g., a calling service) asks to access the user's devices with the assurance
@@ -719,7 +719,7 @@
             However, because sites can cause the browser to provide
             IP addresses, this provides a mechanism for sites to learn
             about the user's network environment even if the user is behind
-            a VPN that masks their IP address. Implementations wish
+            a VPN that masks their IP address. Implementations may wish
             to provide settings which suppress all non-VPN candidates if
             the user is on certain kinds of VPN, especially privacy-oriented
             systems such as Tor.
@@ -1094,6 +1094,8 @@
             <organization></organization>
           </author>
 
+          <!-- Date from PDF properties -->
+          <date day="19" month="September" year="2010" />
 
         </front>
         <seriesInfo name="" value="RTC-Web Workshop"/>
@@ -1111,6 +1113,9 @@
           <author initials="J.D." surname="Tygar">
             <organization></organization>
           </author>
+
+          <!-- Date of USENIX Security Symposium -->
+          <date month="August" year="1999" />
         </front>
         <seriesInfo name="" value="Proceedings of the 8th USENIX Security Symposium, 1999"/>
       </reference>
@@ -1136,6 +1141,9 @@
           <author initials="L." surname="cranor">
             <organization></organization>
           </author>
+
+          <!-- Date of USENIX Security Symposium -->
+          <date month="August" year="2009" />
         </front>
 
         <seriesInfo name="" value="Proceedings of the 18th USENIX Security Symposium, 2009"/>
@@ -1155,6 +1163,9 @@
           <author initials="M." surname="Macon">
             <organization></organization>
           </author>
+
+          <!-- Date of ICASSP 2001 -->
+          <date month="May" year="2001" />
         </front>
 
         <seriesInfo name="" value="Proceedings of ICASSP, May 2001"/>
@@ -1174,6 +1185,8 @@
             <organization></organization>
           </author>
 
+          <!-- Date from http://www.researchgate.net/publication/228819912 -->
+          <date month="January" year="2008" />
         </front>
       </reference>
 
@@ -1197,6 +1210,9 @@
           <author initials="C." surname="Jackson">
             <organization></organization>
           </author>
+
+          <!-- Date from PDF properties -->
+          <date month="May" year="2011" />
         </front>
 
         <seriesInfo name="" value="W2SP, 2011"/>
@@ -1215,6 +1231,9 @@
           <author initials="C." surname="Jackson">
             <organization></organization>
           </author>
+
+          <!-- Date from PDF properties -->
+          <date month="July" year="2008" />
         </front>
 
         <seriesInfo name="" value="W2SP, 2008"/>
@@ -1228,6 +1247,9 @@
           <author initials="A." surname="van Kesteren">
             <organization></organization>
           </author>
+
+          <!-- Date from http://www.w3.org/TR/2014/REC-cors-20140116/ -->
+          <date day="16" month="January" year="2014" />
         </front>
         <format target="http://www.w3.org/TR/cors/" type="TXT"/>
       </reference>
@@ -1239,6 +1261,9 @@
           <author surname="Adobe">
           <organization></organization>
           </author>
+
+          <!-- Date from PDF properties -->
+          <date day="23" month="April" year="2013" />
         </front>
         <format target="http://www.adobe.com/content/dam/Adobe/en/devnet/swf/pdf/swf_file_format_spec_v10.pdf" type="PDF"/>
       </reference>
