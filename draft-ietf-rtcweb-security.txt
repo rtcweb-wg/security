@@ -4,8 +4,8 @@
 
 RTC-Web                                                      E. Rescorla
 Internet-Draft                                                RTFM, Inc.
-Intended status: Standards Track                           July 04, 2014
-Expires: January 5, 2015
+Intended status: Standards Track                          March 21, 2017
+Expires: September 22, 2017
 
 
                    Security Considerations for WebRTC
@@ -42,20 +42,20 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 5, 2015.
+   This Internet-Draft will expire on September 22, 2017.
 
 Copyright Notice
 
-   Copyright (c) 2014 IETF Trust and the persons identified as the
+   Copyright (c) 2017 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
 
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 1]
+Rescorla               Expires September 22, 2017               [Page 1]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 2]
+Rescorla               Expires September 22, 2017               [Page 2]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
          4.3.2.2.  Short Authentication Strings  . . . . . . . . . .  18
@@ -165,9 +165,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 3]
+Rescorla               Expires September 22, 2017               [Page 3]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    In the system shown in Figure 1, Alice and Bob both have WebRTC
@@ -221,9 +221,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 4]
+Rescorla               Expires September 22, 2017               [Page 4]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    is trivial for attackers to divert users to sites of their choice.
@@ -277,9 +277,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 5]
+Rescorla               Expires September 22, 2017               [Page 5]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
 3.2.  Same Origin Policy
@@ -333,9 +333,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 6]
+Rescorla               Expires September 22, 2017               [Page 6]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    vulnerabilities in the existing Java and Flash consent verification
@@ -389,9 +389,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 7]
+Rescorla               Expires September 22, 2017               [Page 7]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    the network (see Section 4.2.  Consent for device access is largely a
@@ -445,9 +445,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 8]
+Rescorla               Expires September 22, 2017               [Page 8]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
 4.1.2.  Calling Scenarios and User Expectations
@@ -501,9 +501,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015                [Page 9]
+Rescorla               Expires September 22, 2017               [Page 9]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    is continuing in order to avoid attacks where the calling site just
@@ -557,9 +557,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 10]
+Rescorla               Expires September 22, 2017              [Page 10]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    which point the consent becomes useless.  Thus, while it may be
@@ -613,9 +613,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 11]
+Rescorla               Expires September 22, 2017              [Page 11]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    3.  The attacker forges the response apparently http://calling-
@@ -669,9 +669,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 12]
+Rescorla               Expires September 22, 2017              [Page 12]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
 4.2.1.  ICE
@@ -725,9 +725,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 13]
+Rescorla               Expires September 22, 2017              [Page 13]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
 4.2.3.  Backward Compatibility
@@ -781,9 +781,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 14]
+Rescorla               Expires September 22, 2017              [Page 14]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    Once initial consent is verified, we also need to verify continuing
@@ -837,9 +837,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 15]
+Rescorla               Expires September 22, 2017              [Page 15]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    practice in modern browsers is to avoid this whenever possible.  "In-
@@ -893,9 +893,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 16]
+Rescorla               Expires September 22, 2017              [Page 16]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    standard practice in Web services to run extensive logging and
@@ -949,9 +949,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 17]
+Rescorla               Expires September 22, 2017              [Page 17]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    notwithstanding.)  Thus, users will frequently be alerted to key
@@ -1005,9 +1005,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 18]
+Rescorla               Expires September 22, 2017              [Page 18]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    Once users have checked the SAS once, key continuity is required to
@@ -1061,9 +1061,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 19]
+Rescorla               Expires September 22, 2017              [Page 19]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    peer.  In many cases, this is acceptable because the user values
@@ -1117,9 +1117,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 20]
+Rescorla               Expires September 22, 2017              [Page 20]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
 4.4.2.  Browser Fingerprinting
@@ -1173,9 +1173,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 21]
+Rescorla               Expires September 22, 2017              [Page 21]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
 8.1.  Normative References
@@ -1229,9 +1229,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 22]
+Rescorla               Expires September 22, 2017              [Page 22]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    [I-D.ietf-rtcweb-security-arch]
@@ -1285,9 +1285,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 23]
+Rescorla               Expires September 22, 2017              [Page 23]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    [RFC4347]  Rescorla, E. and N. Modadugu, "Datagram Transport Layer
@@ -1341,9 +1341,9 @@ Internet-Draft               WebRTC Security                   July 2014
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 24]
+Rescorla               Expires September 22, 2017              [Page 24]
 
-Internet-Draft               WebRTC Security                   July 2014
+Internet-Draft               WebRTC Security                  March 2017
 
 
    [whitten-johnny]
@@ -1397,4 +1397,4 @@ Author's Address
 
 
 
-Rescorla                 Expires January 5, 2015               [Page 25]
+Rescorla               Expires September 22, 2017              [Page 25]
