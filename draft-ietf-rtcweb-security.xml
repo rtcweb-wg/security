@@ -200,7 +200,7 @@
         you to visit their sites but do not control the network, and NETWORK
         ATTACKERS, who are able to control your network. Network attackers correspond
         to the <xref target="RFC3552"/> "Internet Threat Model". Note that
-        for HTTP traffic, a network attacker is also a Web attacker,
+        for non-HTTPS traffic, a network attacker is also a Web attacker,
         since it can inject traffic as if it were any non-HTTPS Web
         site. Thus, when analyzing HTTP connections, we must assume
         that traffic is going to the attacker.
@@ -316,7 +316,7 @@
         </t>
         <t>
           In either case, identity is at the heart of any consent decision.
-          Moreover, identity is all that the browser can meaningfully enforce;
+          Moreover, the identity of the party the browser is connecting to is all that the browser can meaningfully enforce;
           if you are calling A, A can simply forward the media to C. Similarly,
           if you authorize A to place a call to B, A can call C instead.
           In either case, all the browser is able to do is verify and check
@@ -330,7 +330,7 @@
         <t>
           It's important to understand that consent to access local devices
           is largely orthogonal to consent to transmit various kinds of
-          data over the network (see <xref target="sec.rtc-comm-consent"/>.
+          data over the network (see <xref target="sec.rtc-comm-consent"/>).
           Consent for device access is largely a matter of protecting
           the user's privacy from malicious sites. By contrast,
           consent to send network traffic is about preventing the
