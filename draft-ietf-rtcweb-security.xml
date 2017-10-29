@@ -23,6 +23,7 @@
 <!ENTITY I-D.ietf-rtcweb-security-arch SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-security-arch.xml">
 <!ENTITY I-D.ietf-rtcweb-overview SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-overview.xml">
 <!ENTITY I-D.ietf-avtcore-6222bis SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-avtcore-6222bis.xml">
+<!ENTITY I-D.ietf-rtcweb-ip-handling SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-ip-handling.xml">
 
 
 ]>
@@ -74,7 +75,7 @@
         WebRTC is a protocol suite for use with real-time applications that can
         be deployed in browsers - "real time communication on the Web".  This
         document defines the WebRTC threat model and analyzes the security threats of
-        WebRTC in that model.  
+        WebRTC in that model.
       </t>
     </abstract>
   </front>
@@ -602,7 +603,7 @@
           <t>
             There also needs to be some mechanism for the browser to verify that
             the target of the traffic continues to wish to receive it. Because ICE keepalives are
-            indications, they will not work here. 
+            indications, they will not work here.
             <xref target="I-D.ietf-rtcweb-stun-consent-freshness"/> describes the mechanism
             for providing consent freshness.
           </t>
@@ -624,7 +625,7 @@
           <t>
             Note that in principle an attacker could exert some control
             over SRTP packets by using a combination of the WebAudio API
-            and extremely tight timing control. 
+            and extremely tight timing control.
             The primary risk here seems to be carriage of SRTP over TURN TCP.
             However, as SRTP packets have an extremely characteristic packet
             header it seems unlikely that any but the most aggressive
@@ -1001,7 +1002,9 @@
             provide mechanisms to reset these identifiers (e.g., with the
             same lifetime as cookies). Moreover, the API should provide
             mechanisms to allow sites intended for anonymous calling
-            to force the minting of fresh identifiers.
+            to force the minting of fresh identifiers. In addition,
+            IP addresses can be a source of call linkage
+            <xref target="I-D.ietf-rtcweb-ip-handling"/>
           </t>
         </section>
 
@@ -1075,6 +1078,7 @@
       &I-D.ietf-rtcweb-security-arch;
       &I-D.ietf-avtcore-6222bis;
       &I-D.ietf-rtcweb-stun-consent-freshness;
+      &I-D.ietf-rtcweb-ip-handling;
 
 
       <reference anchor="abarth-rtcweb">
