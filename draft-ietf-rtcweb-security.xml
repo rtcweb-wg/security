@@ -1056,7 +1056,6 @@
 
     <references title="Normative References">
       &RFC2119;
-      &I-D.ietf-rtcweb-overview;
     </references>
     <references title="Informative References">
       &RFC3261;
@@ -1079,6 +1078,7 @@
       &I-D.ietf-avtcore-6222bis;
       &I-D.ietf-rtcweb-stun-consent-freshness;
       &I-D.ietf-rtcweb-ip-handling;
+      &I-D.ietf-rtcweb-overview;
 
 
       <reference anchor="abarth-rtcweb">
