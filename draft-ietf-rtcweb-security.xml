@@ -17,12 +17,11 @@
 <!ENTITY RFC6454 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6454.xml">
 <!ENTITY RFC6455 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6455.xml">
 <!ENTITY RFC6222 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6222.xml">
+<!ENTITY RFC7022 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7022.xml">
+<!ENTITY RFC7675 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7675.xml">
 
-<!ENTITY I-D.kaufman-rtcweb-security-ui SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.kaufman-rtcweb-security-ui.xml">
-<!ENTITY I-D.ietf-rtcweb-stun-consent-freshness SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-stun-consent-freshness.xml">
 <!ENTITY I-D.ietf-rtcweb-security-arch SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-security-arch.xml">
 <!ENTITY I-D.ietf-rtcweb-overview SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-overview.xml">
-<!ENTITY I-D.ietf-avtcore-6222bis SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-avtcore-6222bis.xml">
 <!ENTITY I-D.ietf-rtcweb-ip-handling SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-ip-handling.xml">
 
 
@@ -604,7 +603,7 @@
             There also needs to be some mechanism for the browser to verify that
             the target of the traffic continues to wish to receive it. Because ICE keepalives are
             indications, they will not work here.
-            <xref target="I-D.ietf-rtcweb-stun-consent-freshness"/> describes the mechanism
+            <xref target="RFC7675"/> describes the mechanism
             for providing consent freshness.
           </t>
         </section>
@@ -997,7 +996,7 @@
             persistent identifiers such as DTLS certificates
             (if they are reused between connections) and RTCP CNAMES
             (if generated according to <xref target="RFC6222"/> rather
-            than the privacy preserving mode of <xref target="I-D.ietf-avtcore-6222bis"/>).
+            than the privacy preserving mode of <xref target="RFC7022"/>).
             In order to prevent this type of correlation, browsers need to
             provide mechanisms to reset these identifiers (e.g., with the
             same lifetime as cookies). Moreover, the API should provide
@@ -1073,10 +1072,9 @@
       &RFC6222;
       &RFC6454;
       &RFC6455;
-      &I-D.kaufman-rtcweb-security-ui;
+      &RFC7022;
+      &RFC7675;
       &I-D.ietf-rtcweb-security-arch;
-      &I-D.ietf-avtcore-6222bis;
-      &I-D.ietf-rtcweb-stun-consent-freshness;
       &I-D.ietf-rtcweb-ip-handling;
       &I-D.ietf-rtcweb-overview;
 
