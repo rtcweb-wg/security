@@ -227,7 +227,7 @@
       <section title="Same-Origin Policy" anchor="sec.same-origin">
         <t>
           Many other resources are accessible but isolated. For instance,
-          while scripts are allowed to make HTTP requests via the XMLHttpRequest() API (see <xref target="XHR Spec"/>)
+          while scripts are allowed to make HTTP requests via the XMLHttpRequest() API (see <xref target="XmlHttpRequest"/>)
           those requests are not allowed to be made to any server, but rather solely
           to the same ORIGIN from whence the script came <xref target="RFC6454"/>
           (although CORS <xref target="CORS"/> and WebSockets
@@ -966,7 +966,7 @@
               This verification must be possible both from the local
               side and the remote side. I.e., I must be able to verify
               that the person I am calling has engaged a secure media
-              mode (see <ref target="sec.malicious"/>. In order to achieve this it will be necessary to
+              mode (see <xref target="sec.malicious"/>). In order to achieve this it will be necessary to
               cryptographically bind an indication of the local media
               access policy into the cryptographic authentication
               procedures detailed in the previous sections.
@@ -1276,18 +1276,17 @@
         <format target="http://www.adobe.com/content/dam/Adobe/en/devnet/swf/pdf/swf_file_format_spec_v10.pdf" type="PDF"/>
       </reference>
 
-      <reference anchor="XHR Spec">
+      <reference anchor="XmlHttpRequest">
           <front>
-           <title>XMLHttpRequest</title>
+           <title>XMLHttpRequesti Level 2</title>
  
-            <author surname="WhatWG">
-            <organization></organization>
+            <author initials="A." surname="van Kesteren">
+                <organization></organization>
             </author>
-
+            <date day="17" month="January" year="2012"/>
           </front>
-          <format target="https://xhr.spec.whatwg.org/" type="TXT"/>
-        </reference>
-
+          <format target="http://www.w3.org/TR/XMLHttpRequest/" type="TXT"/>
+      </reference>
 
 
       <reference anchor="Fingerprinting">
@@ -1295,7 +1294,7 @@
            <title>Fingerprinting Guidance for Web Specification Authors (Draft)</title>
 
            <author surname="W3C">
-           <organization></organization>
+               <organization></organization>
            </author>
 
            <date day="24" month="November" year="2013" />
@@ -1307,16 +1306,26 @@
           <front>
             <title>Fingerprinting Guidance for Web Specification Authors (Draft)</title>
  
-            <author initials="N." surname="Sakimura"/>
-            <author initials="J." surname="Bradley"/>
-            <author initials="M." surname="Jones"/>
-            <author initials="B." surname="de Medeiros"/>
-            <author initials="C." surname="Mortimore"/>
+            <author initials="N." surname="Sakimura">
+                <organization></organization>
+            </author>
+            <author initials="J." surname="Bradley">
+                <organization></organization>
+            </author>
+            <author initials="M." surname="Jones">
+                <organization></organization>
+            </author>
+            <author initials="B." surname="de Medeiros">
+                <organization></organization>
+            </author>
+            <author initials="C." surname="Mortimore">
+                <organization></organization>
+            </author>
  
             <date day="8" month="November" year="2014" />
           </front>
           <format target="https://openid.net/specs/openid-connect-core-1_0.html/" type="HTML"/>
-        </reference>
+      </reference>
 
 
     </references>
