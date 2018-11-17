@@ -436,7 +436,7 @@
               call. As described in <xref target="sec.resources"/>,
               great care must be taken in the design of this interface
               to avoid the users just clicking through. Note also
-              that the user interface chrome, which the representation
+              that the user interface chrome, which is the representation
               through which the user interacts with the user agent itself,
               must clearly display elements
               showing that the call is continuing in order to avoid attacks
@@ -921,7 +921,7 @@
               (and nearly too cumbersome for administrators).
               However,
               a new generation of Web-based identity providers (BrowserID, Federated Google Login,
-              Facebook Connect, OAuth <xref target="RFC6749">, OpenID <xref target="OpenID"/>, WebFinger <xref target="RFC7033">), has recently been developed
+              Facebook Connect, OAuth <xref target="RFC6749"/>, OpenID <xref target="OpenID"/>, WebFinger <xref target="RFC7033"/>), has recently been developed
               and use Web technologies to provide lightweight (from the user's
               perspective) third-party authenticated transactions.
               It is possible to use systems of this type to authenticate WebRTC calls,
@@ -1067,7 +1067,7 @@
 
     <references title="Normative References">
       &RFC2119;
-      &RFC2119;
+      &RFC8174;
     </references>
     <references title="Informative References">
       &RFC3261;
