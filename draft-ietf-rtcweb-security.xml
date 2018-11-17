@@ -19,6 +19,9 @@
 <!ENTITY RFC6222 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6222.xml">
 <!ENTITY RFC7022 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7022.xml">
 <!ENTITY RFC7675 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7675.xml">
+<!ENTITY RFC8174 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8174.xml">
+<!ENTITY RFC6749 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.6749.xml">
+<!ENTITY RFC7033 SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.7033.xml">
 
 <!ENTITY I-D.ietf-rtcweb-security-arch SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-security-arch.xml">
 <!ENTITY I-D.ietf-rtcweb-overview SYSTEM "http://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-rtcweb-overview.xml">
@@ -82,12 +85,12 @@
   <middle>
     <section title="Introduction" anchor="sec.introduction">
       <t>
-        The Real-Time Communications on the Web (RTCWEB) working group is tasked with
-        standardizing protocols for real-time communications between Web browsers, generally
+        The Real-Time Communications on the Web (RTCWEB) working group standardized
+        protocols for real-time communications between Web browsers, generally
         called "WebRTC" <xref target="I-D.ietf-rtcweb-overview"/>. The
         major use cases for WebRTC technology are real-time audio and/or video calls,
         Web conferencing, and direct data transfer. Unlike most conventional real-time systems,
-        (e.g., SIP-based<xref target="RFC3261"></xref> soft phones) WebRTC communications are directly controlled
+        (e.g., SIP-based <xref target="RFC3261" /> soft phones) WebRTC communications are directly controlled
         by some Web server. A simple case is shown below.
       </t>
 
@@ -110,11 +113,13 @@
                   |  Browser  |<---------->|  Browser  |
                   |           |            |           |
                   +-----------+            +-----------+
+                      Alice                     Bob
+
         ]]></artwork>
       </figure>
       <t>
         In the system shown in <xref target="fig.simple"/>, Alice and Bob both have
-        WebRTC enabled browsers and they visit some Web server which operates a
+        WebRTC-enabled browsers and they visit some Web server which operates a
         calling service. Each of their browsers exposes standardized JavaScript
         calling APIs (implementated as browser built-ins)
         which are used by the Web server to set up a call between Alice and Bob.
@@ -148,9 +153,10 @@
     </section>
     <section anchor="sec-term" title="Terminology">
       <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-      "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
-      document are to be interpreted as described in <xref
-      target="RFC2119">RFC 2119</xref>.</t>
+      "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+      "OPTIONAL" in this document are to be interpreted as described in
+      BCP 14 <xref target="RFC2119"/>  <xref target="RFC8174"/> when, and only when, they appear in all
+      capitals, as shown here.</t>
     </section>
 
     <section title="The Browser Threat Model" anchor="sec.web-security">
@@ -199,13 +205,13 @@
       <section title="Access to Local Resources" anchor="sec.resources">
         <t>
           While the browser has access to local resources such as keying material,
-          files, the camera and the microphone, it strictly limits or forbids web
+          files, the camera, and the microphone, it strictly limits or forbids web
           servers from accessing those same resources. For instance, while it is possible
           to produce an HTML form which will allow file upload, a script cannot do
           so without user consent and in fact cannot even suggest a specific file
           (e.g., /etc/passwd); the user must explicitly select the file and consent
           to its upload. [Note: in many cases browsers are explicitly designed to
-          avoid dialogs with the semantics of "click here to screw yourself", as
+          avoid dialogs with the semantics of "click here to bypass security checks", as
           extensive research shows that users are prone to consent under such
           circumstances.]
         </t>
@@ -218,10 +224,10 @@
           files and run them).
         </t>
       </section>
-      <section title="Same Origin Policy" anchor="sec.same-origin">
+      <section title="Same-Origin Policy" anchor="sec.same-origin">
         <t>
           Many other resources are accessible but isolated. For instance,
-          while scripts are allowed to make HTTP requests via the XMLHttpRequest() API
+          while scripts are allowed to make HTTP requests via the XMLHttpRequest() API (see <xref target="XmlHttpRequest"/>)
           those requests are not allowed to be made to any server, but rather solely
           to the same ORIGIN from whence the script came <xref target="RFC6454"/>
           (although CORS <xref target="CORS"/> and WebSockets
@@ -355,7 +361,7 @@
           </t>
           <t>
             A less obvious threat involves the impact of screen sharing on the
-            Web security model. A key part of the Same Origin Policy is that
+            Web security model. A key part of the Same-Origin Policy is that
             HTML or JS from site A can reference content from site B and cause
             the browser to load it, but (unless explicitly permitted) cannot
             see the result. However, if a web application from a site is
@@ -430,7 +436,9 @@
               call. As described in <xref target="sec.resources"/>,
               great care must be taken in the design of this interface
               to avoid the users just clicking through. Note also
-              that the user interface chrome must clearly display elements
+              that the user interface chrome, which is the representation
+              through which the user interacts with the user agent itself,
+              must clearly display elements
               showing that the call is continuing in order to avoid attacks
               where the calling site just leaves it up indefinitely but
               shows a Web UI that implies otherwise.
@@ -485,9 +493,9 @@
         <t>
           The other two options are designed to restrict calls to a given target.
           Callee-oriented consent provided by the calling site
-          not work well because a malicious site can claim that the
+          would not work well because a malicious site can claim that the
           user is calling any user of his choice. One fix for this is to tie calls to a
-          cryptographically established identity. While not suitable for all cases,
+          cryptographically-established identity. While not suitable for all cases,
           this approach may be useful for some. If we consider the case
           of advertising, it's not particularly convenient
           to require the advertiser to instantiate an iframe on the hosting site just
@@ -545,7 +553,7 @@
           HTTP or from an untrusted site, because that JavaScript is executed
           in the security context of the page <xref target="finer-grained"/>.
           Thus, it is also dangerous to allow WebRTC functionality from
-          HTTPS origins that embed mixed content.
+          HTTPS origins that embed mixed-content.
           Note: this issue is not restricted
           to PAGES which contain mixed content. If a page from a given origin ever loads mixed content
           then it is possible for a network attacker to infect the browser's notion of that
@@ -649,7 +657,7 @@
           <t>
             <list style="symbols">
               <t>STUN checks without using ICE (i.e., the non-RTC-web endpoint sets up a STUN responder.)</t>
-              <t>Use or RTCP as an implicit reachability check.</t>
+              <t>Use of RTCP as an implicit reachability check.</t>
             </list>
           </t>
           <t>
@@ -701,8 +709,8 @@
             address reveals a lot of information about the callee's location.
             In order to avoid tracking, implementations may wish to suppress
             the start of ICE negotiation until the callee has answered. In
-            addition, either side may wish to hide their location entirely
-            by forcing all traffic through a TURN server.
+            addition, either side may wish to hide their location from the other
+            side entirely by forcing all traffic through a TURN server.
           </t>
           <t>
             In ordinary operation, the site learns the browser's IP address,
@@ -729,7 +737,7 @@
           Technology for providing this
           service (for instance, SRTP <xref target="RFC3711"/>, DTLS <xref target="RFC6347"/> and
           DTLS-SRTP <xref target="RFC5763"/>) is well understood. However, we must
-          examine this technology to the WebRTC context, where the threat
+          examine this technology in the WebRTC context, where the threat
           model is somewhat different.
         </t>
         <t>
@@ -850,7 +858,7 @@
               browser "this is a call to user X". All the calling service
               needs to do to avoid triggering a key continuity warning
               is to tell the browser that "this is a call to user Y"
-              where Y is close to X.
+              where Y is confusable with X.
               Even if the user actually checks the other side's name
               (which all available evidence indicates is unlikely),
               this would require (a) the browser to trusted UI
@@ -913,7 +921,7 @@
               (and nearly too cumbersome for administrators).
               However,
               a new generation of Web-based identity providers (BrowserID, Federated Google Login,
-              Facebook Connect, OAuth, OpenID, WebFinger), has recently been developed
+              Facebook Connect, OAuth <xref target="RFC6749"/>, OpenID <xref target="OpenID"/>, WebFinger <xref target="RFC7033"/>), has recently been developed
               and use Web technologies to provide lightweight (from the user's
               perspective) third-party authenticated transactions.
               It is possible to use systems of this type to authenticate WebRTC calls,
@@ -958,7 +966,7 @@
               This verification must be possible both from the local
               side and the remote side. I.e., I must be able to verify
               that the person I am calling has engaged a secure media
-              mode. In order to achieve this it will be necessary to
+              mode (see <xref target="sec.malicious"/>). In order to achieve this it will be necessary to
               cryptographically bind an indication of the local media
               access policy into the cryptographic authentication
               procedures detailed in the previous sections.
@@ -990,7 +998,7 @@
         <section title="Correlation of Anonymous Calls">
           <t>
             While persistent endpoint identifiers can be a useful security
-            feature (see <xref target="sec.key-continuity"/> they can
+            feature (see <xref target="sec.key-continuity"/>) they can
             also represent a privacy threat in settings where the user
             wishes to be anonymous. WebRTC provides a number of possible
             persistent identifiers such as DTLS certificates
@@ -1013,7 +1021,7 @@
             and WebRTC is no exception. Specifically, sites can use the
             presence or absence of specific devices as a browser fingerprint.
             In general, the API needs to be balanced between functionality
-            and the incremental fingerprint risk.
+            and the incremental fingerprint risk.  See <xref target="Fingerprinting"/>
           </t>
         </section>
       </section>
@@ -1059,6 +1067,7 @@
 
     <references title="Normative References">
       &RFC2119;
+      &RFC8174;
     </references>
     <references title="Informative References">
       &RFC3261;
@@ -1076,7 +1085,9 @@
       &RFC6222;
       &RFC6454;
       &RFC6455;
+      &RFC6749;
       &RFC7022;
+      &RFC7033;
       &RFC7675;
       &I-D.ietf-rtcweb-security-arch;
       &I-D.ietf-rtcweb-ip-handling;
@@ -1265,40 +1276,60 @@
         <format target="http://www.adobe.com/content/dam/Adobe/en/devnet/swf/pdf/swf_file_format_spec_v10.pdf" type="PDF"/>
       </reference>
 
+      <reference anchor="XmlHttpRequest">
+          <front>
+           <title>XMLHttpRequesti Level 2</title>
+ 
+            <author initials="A." surname="van Kesteren">
+                <organization></organization>
+            </author>
+            <date day="17" month="January" year="2012"/>
+          </front>
+          <format target="http://www.w3.org/TR/XMLHttpRequest/" type="TXT"/>
+      </reference>
+
+
+      <reference anchor="Fingerprinting">
+         <front>
+           <title>Fingerprinting Guidance for Web Specification Authors (Draft)</title>
+
+           <author surname="W3C">
+               <organization></organization>
+           </author>
+
+           <date day="24" month="November" year="2013" />
+         </front>
+         <format target="https://www.w3.org/TR/fingerprinting-guidance/#acknowledgement/" type="TXT"/>
+       </reference>
+
+      <reference anchor="OpenID">
+          <front>
+            <title>Fingerprinting Guidance for Web Specification Authors (Draft)</title>
+ 
+            <author initials="N." surname="Sakimura">
+                <organization></organization>
+            </author>
+            <author initials="J." surname="Bradley">
+                <organization></organization>
+            </author>
+            <author initials="M." surname="Jones">
+                <organization></organization>
+            </author>
+            <author initials="B." surname="de Medeiros">
+                <organization></organization>
+            </author>
+            <author initials="C." surname="Mortimore">
+                <organization></organization>
+            </author>
+ 
+            <date day="8" month="November" year="2014" />
+          </front>
+          <format target="https://openid.net/specs/openid-connect-core-1_0.html/" type="HTML"/>
+      </reference>
+
+
     </references>
 
 
 </back>
-<!--
-
-On Thu, Sep 22, 2011 at 5:45 AM, Magnus Westerlund <magnus.westerlund@ericsson.com> wrote:
-> Hi EKR,
->
-> (As an individual)
->
-> Thanks for posting the draft.
->
-> I am missing a few security issues that I think should be considered.
->
-> 1. The attempt to overload the links in an domain by concentrating
-> traffic on the domain by choosing peer-pairs. Not that I think there is
-> any real protection against this other than limit the flows to their
-> "fair" share.
->
-> 2. Configuring RTCP or other automatically sent traffic to high
-> bit-rates. Especially under conditions where continued consent can't be
-> determined.
->
-                                                > Cheers
->
-> Magnus Westerlund
->
->
->
-
-
-
--->
-
-            <!-- drill down -->
 </rfc>
