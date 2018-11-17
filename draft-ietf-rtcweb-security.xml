@@ -85,7 +85,7 @@
   <middle>
     <section title="Introduction" anchor="sec.introduction">
       <t>
-        The Real-Time Communications on the Web (RTCWEB) working group standardized
+        The Real-Time Communications on the Web (RTCWEB) working group has standardized
         protocols for real-time communications between Web browsers, generally
         called "WebRTC" <xref target="I-D.ietf-rtcweb-overview"/>. The
         major use cases for WebRTC technology are real-time audio and/or video calls,
@@ -1040,7 +1040,7 @@
       <t></t>
     </section>
 
-    <section title="IANA Considerations">                                                                                                        
+    <section title="IANA Considerations">
        <t>There are no IANA considerations.</t>
      </section>
 
@@ -1279,7 +1279,7 @@
       <reference anchor="XmlHttpRequest">
           <front>
            <title>XMLHttpRequesti Level 2</title>
- 
+
             <author initials="A." surname="van Kesteren">
                 <organization></organization>
             </author>
@@ -1305,7 +1305,7 @@
       <reference anchor="OpenID">
           <front>
             <title>Fingerprinting Guidance for Web Specification Authors (Draft)</title>
- 
+
             <author initials="N." surname="Sakimura">
                 <organization></organization>
             </author>
@@ -1321,7 +1321,7 @@
             <author initials="C." surname="Mortimore">
                 <organization></organization>
             </author>
- 
+
             <date day="8" month="November" year="2014" />
           </front>
           <format target="https://openid.net/specs/openid-connect-core-1_0.html/" type="HTML"/>
