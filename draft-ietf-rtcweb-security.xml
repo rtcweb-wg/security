@@ -776,7 +776,7 @@
           techniques discussed in <xref target="sec.retrospective-compromise"/>.
           However, it is extremely difficult to prevent a
           trusted but malicious calling service from actively attacking a user's calls,
-          either by mounting a MITM attack or by diverting them entirely.
+          either by mounting a Man-in-the-Middle (MITM) attack or by diverting them entirely.
           (Note that this attack applies equally to a network attacker if communications
           to the calling service are not secured.) We discuss some potential approaches
           and why they are likely to be impractical in <xref target="sec.during-attack"/>.
