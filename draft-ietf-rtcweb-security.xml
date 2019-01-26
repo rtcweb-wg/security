@@ -548,15 +548,14 @@
           calls at all from a page fetched over HTTP.
         </t>
         <t>
-          Even if calls are only possible from HTTPS [RFC2818] sites, if the
-          site embeds active content (e.g., JavaScript) that is fetched over
-          HTTP or from an untrusted site, because that JavaScript is executed
-          in the security context of the page <xref target="finer-grained"/>.
-          Thus, it is also dangerous to allow WebRTC functionality from
-          HTTPS origins that embed mixed-content.
-          Note: this issue is not restricted
-          to PAGES which contain mixed content. If a page from a given origin ever loads mixed content
-          then it is possible for a network attacker to infect the browser's notion of that
+          Even if calls are only possible from HTTPS [RFC2818] sites,
+          if those sites include active content (e.g., JavaScript) from an untrusted
+          site, that JavaScript is executed in the security context of the page
+          <xref target="finer-grained"/>. This could lead to compromise of a call
+          even if the parent page is safe. Note: this issue is not restricted
+          to PAGES which contain untrusted content. If a page from a
+          given origin ever loads JavaScript from an attacker, then it is
+          possible for that attacker to infect the browser's notion of that
           origin semi-permanently.
         </t>
         </section>
