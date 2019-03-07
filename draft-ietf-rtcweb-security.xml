@@ -534,7 +534,7 @@
             with the calling service.</t>
             <t>The attacker modifies my HTTP connection to inject an IFRAME (or a redirect)
             to http://calling-service.example.com</t>
-            <t>The attacker forges the response apparently  http://calling-service.example.com/ to
+            <t>The attacker forges the response apparently from http://calling-service.example.com/ to 
             inject JS to initiate a call to himself.</t>
           </list>
         </t>
@@ -720,7 +720,8 @@
             a VPN that masks their IP address. Implementations may wish
             to provide settings which suppress all non-VPN candidates if
             the user is on certain kinds of VPN, especially privacy-oriented
-            systems such as Tor.
+            systems such as Tor.   See <xref target="I-D.ietf-rtcweb-ip-handling"/>
+            for additional information.
           </t>
         </section>
       </section>
@@ -1010,7 +1011,7 @@
             mechanisms to allow sites intended for anonymous calling
             to force the minting of fresh identifiers. In addition,
             IP addresses can be a source of call linkage
-            <xref target="I-D.ietf-rtcweb-ip-handling"/>
+            <xref target="I-D.ietf-rtcweb-ip-handling"/>.
           </t>
         </section>
 
@@ -1020,7 +1021,7 @@
             and WebRTC is no exception. Specifically, sites can use the
             presence or absence of specific devices as a browser fingerprint.
             In general, the API needs to be balanced between functionality
-            and the incremental fingerprint risk.  See <xref target="Fingerprinting"/>
+            and the incremental fingerprint risk.  See <xref target="Fingerprinting"/>.
           </t>
         </section>
       </section>
