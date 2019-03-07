@@ -588,7 +588,7 @@
         <section title="ICE" anchor="sec.ice">
           <t>
           Verifying receiver consent requires some sort of explicit handshake, but conveniently
-          we already need one in order to do NAT hole-punching. ICE <xref target="RFC8445"/> includes a handshake
+          we already need one in order to do NAT hole-punching. ICE (Interactive Connectivity Establishment)  <xref target="RFC8445"/> includes a handshake
           designed to verify that the receiving element wishes to receive traffic from the
           sender. It
           is important to remember here that the site initiating ICE is
