@@ -317,7 +317,7 @@
           Moreover, the identity of the party the browser is connecting to is all that the browser can meaningfully enforce;
           if you are calling A, A can simply forward the media to C. Similarly,
           if you authorize A to place a call to B, A can call C instead.
-          In both cases, all the browser is able to do is verify and check
+          In either cases, all the browser is able to do is verify and check
           authorization for whoever is controlling where the media goes.
           The target of the media can of course advertise a security/privacy
           policy, but this is not something that the browser can
@@ -332,7 +332,7 @@
           Consent for device access is largely a matter of protecting
           the user's privacy from malicious sites. By contrast,
           consent to send network traffic is about preventing the
-          user's browser from being used to attack its network.
+          user's browser from being used to attack its local network.
           Thus, we need to ensure communications consent even if the
           site is not able to access the camera and microphone at
           all (hence WebSockets's consent mechanism) and similarly
