@@ -589,7 +589,7 @@
         <section title="ICE" anchor="sec.ice">
           <t>
           Verifying receiver consent requires some sort of explicit handshake, but conveniently
-          we already need one in order to do NAT hole-punching. ICE <xref target="RFC8445"/> includes a handshake
+          we already need one in order to do NAT hole-punching. Interactive Connectivity Establishment (ICE)  <xref target="RFC8445"/> includes a handshake
           designed to verify that the receiving element wishes to receive traffic from the
           sender. It
           is important to remember here that the site initiating ICE is
@@ -721,7 +721,8 @@
             a VPN that masks their IP address. Implementations may wish
             to provide settings which suppress all non-VPN candidates if
             the user is on certain kinds of VPN, especially privacy-oriented
-            systems such as Tor.
+            systems such as Tor.   See <xref target="I-D.ietf-rtcweb-ip-handling"/>
+            for additional information.
           </t>
         </section>
       </section>
@@ -971,6 +972,17 @@
               access policy into the cryptographic authentication
               procedures detailed in the previous sections.
             </t>
+            <t>
+              It should be noted that the use of this secure media mode is
+              left to the discretion of the site. When such a mode is
+              engaged, the browser will need to provide indicia to the user
+              that the associated media has been authenticated as coming from
+              the identified user.  This allows WebRTC services that wish to
+              claim end-to-end security to do so in a way that can be easily
+              verified by the user. This model requires that the remote
+              party's browser be included in the TCB, as described in
+              <xref target="sec.web-security"/>.
+            </t>
           </section>
         </section>
         <section title="Malicious Peers" anchor="sec.malicious">
@@ -1011,7 +1023,7 @@
             mechanisms to allow sites intended for anonymous calling
             to force the minting of fresh identifiers. In addition,
             IP addresses can be a source of call linkage
-            <xref target="I-D.ietf-rtcweb-ip-handling"/>
+            <xref target="I-D.ietf-rtcweb-ip-handling"/>.
           </t>
         </section>
 
@@ -1021,7 +1033,7 @@
             and WebRTC is no exception. Specifically, sites can use the
             presence or absence of specific devices as a browser fingerprint.
             In general, the API needs to be balanced between functionality
-            and the incremental fingerprint risk.  See <xref target="Fingerprinting"/>
+            and the incremental fingerprint risk.  See <xref target="Fingerprinting"/>.
           </t>
         </section>
       </section>
