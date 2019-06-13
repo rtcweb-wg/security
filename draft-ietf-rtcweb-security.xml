@@ -970,6 +970,17 @@
               access policy into the cryptographic authentication
               procedures detailed in the previous sections.
             </t>
+            <t>
+              It should be noted that the use of this secure media mode is
+              left to the discretion of the site. When such a mode is
+              engaged, the browser will need to provide indicia to the user
+              that the associated media has been authenticated as coming from
+              the identified user.  This allows WebRTC services that wish to
+              claim end-to-end security to do so in a way that can be easily
+              verified by the user. This model requires that the remote
+              party's browser be included in the TCB, as described in
+              <xref target="sec.web-security"/>.
+            </t>
           </section>
         </section>
         <section title="Malicious Peers" anchor="sec.malicious">
