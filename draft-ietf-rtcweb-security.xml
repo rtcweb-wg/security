@@ -186,20 +186,21 @@
         on the existing Web security model.
       </t>
       <t>
-        In this model, then, the browser acts as a TRUSTED COMPUTING BASE (TCB) both
+        In this model, then, the browser acts as a Trusted Coomputing Base (TCB) both
         from the user's perspective and to some extent from the server's. While HTML
         and JavaScript (JS) provided by the server can cause the browser to execute a variety of
         actions, those scripts operate in a sandbox that isolates them both from
         the user's computer and from each other, as detailed below.
       </t>
       <t>
-        Conventionally, we refer to either WEB ATTACKERS, who are able to induce
-        you to visit their sites but do not control the network, and NETWORK
-        ATTACKERS, who are able to control your network. Network attackers correspond
-        to the <xref target="RFC3552"/> "Internet Threat Model". Note that
-        for non-HTTPS traffic, a network attacker is also a Web attacker,
-        since it can inject traffic as if it were any non-HTTPS Web
-        site. Thus, when analyzing HTTP connections, we must assume
+        Conventionally, we refer to either web attackers, who are able to induce
+        you to visit their sites but do not control the network, and network
+        attackers, who are able to control your network. Network attackers correspond
+        to the <xref target="RFC3552"/> "Internet Threat Model". Note that in some
+        cases, a network attacker is also a web attacker, since transport protocols
+        that do not provide integrity protection allow the network to inject traffic
+        as if they were any communications peer. TLS, and HTTPS in particular, prevent
+        against these attacks, but when analyzing HTTP connections, we must assume
         that traffic is going to the attacker.
       </t>
       <section title="Access to Local Resources" anchor="sec.resources">
@@ -212,8 +213,8 @@
           (e.g., /etc/passwd); the user must explicitly select the file and consent
           to its upload. [Note: in many cases browsers are explicitly designed to
           avoid dialogs with the semantics of "click here to bypass security checks", as
-          extensive research shows that users are prone to consent under such
-          circumstances.]
+          extensive research <xref target="cranor-wolf"/> shows that users are prone to
+          consent under such circumstances.]
         </t>
         <t>
           Similarly, while Flash programs (SWFs) <xref target="SWF"/> can access the camera and microphone, they
@@ -316,7 +317,7 @@
           Moreover, the identity of the party the browser is connecting to is all that the browser can meaningfully enforce;
           if you are calling A, A can simply forward the media to C. Similarly,
           if you authorize A to place a call to B, A can call C instead.
-          In either case, all the browser is able to do is verify and check
+          In either cases, all the browser is able to do is verify and check
           authorization for whoever is controlling where the media goes.
           The target of the media can of course advertise a security/privacy
           policy, but this is not something that the browser can
@@ -447,7 +448,7 @@
         </section>
         <section title="Origin-Based Security">
         <t>
-          Now that we have seen another use case, we can start to reason about
+          Now that we have described the calling scenarios, we can start to reason about
           the security requirements.
         </t>
         <t>
@@ -534,7 +535,7 @@
             with the calling service.</t>
             <t>The attacker modifies my HTTP connection to inject an IFRAME (or a redirect)
             to http://calling-service.example.com</t>
-            <t>The attacker forges the response apparently from http://calling-service.example.com/ to 
+            <t>The attacker forges the response from  http://calling-service.example.com/ to
             inject JS to initiate a call to himself.</t>
           </list>
         </t>
@@ -553,7 +554,7 @@
           site, that JavaScript is executed in the security context of the page
           <xref target="finer-grained"/>. This could lead to compromise of a call
           even if the parent page is safe. Note: this issue is not restricted
-          to PAGES which contain untrusted content. If a page from a
+          to PAGES which contain untrusted content. If any page from a
           given origin ever loads JavaScript from an attacker, then it is
           possible for that attacker to infect the browser's notion of that
           origin semi-permanently.
@@ -861,7 +862,7 @@
               where Y is confusable with X.
               Even if the user actually checks the other side's name
               (which all available evidence indicates is unlikely),
-              this would require (a) the browser has trusted UI
+              this would require (a) the browser to use the trusted UI
               to provide the name and (b) the user to not be fooled by
               similar appearing names.
             </t>
@@ -964,8 +965,8 @@
               that, it will be necessary to provide features whereby
               the site can verifiably give up access to the media streams.
               This verification must be possible both from the local
-              side and the remote side. I.e., I must be able to verify
-              that the person I am calling has engaged a secure media
+              side and the remote side. I.e., users must be able to verify
+              that the person called has engaged a secure media
               mode (see <xref target="sec.malicious"/>). In order to achieve this it will be necessary to
               cryptographically bind an indication of the local media
               access policy into the cryptographic authentication
@@ -1315,7 +1316,7 @@
 
       <reference anchor="OpenID">
           <front>
-            <title>Fingerprinting Guidance for Web Specification Authors (Draft)</title>
+         <title>OpenID Connect Core 1.0</title>
 
             <author initials="N." surname="Sakimura">
                 <organization></organization>
